@@ -17,7 +17,7 @@ public class NameStyleClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(mc -> {
             if (openRequested) {
                 openRequested = false;
-                mc.setScreen(new NameStyleScreen(mc.screen));
+                mc.gui.setScreen(new NameStyleScreen(mc.gui.screen()));
             }
         });
     }

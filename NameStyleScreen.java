@@ -38,7 +38,6 @@ public class NameStyleScreen extends Screen {
         r = (rgb >> 16) & 255; g = (rgb >> 8) & 255; b = rgb & 255;
 
         preview = new StringWidget(cx - 100, y, 200, 12, Component.literal(""), this.font);
-        preview.alignCenter();
         this.addRenderableWidget(preview);
         y += 22;
 
@@ -131,7 +130,7 @@ public class NameStyleScreen extends Screen {
     @Override
     public void onClose() {
         NameStyleConfig.save();
-        if (this.minecraft != null) this.minecraft.setScreen(parent);
+        if (this.minecraft != null) this.minecraft.gui.setScreen(parent);
     }
 
     private static class ChannelSlider extends AbstractSliderButton {

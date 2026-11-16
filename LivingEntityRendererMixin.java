@@ -17,7 +17,7 @@ public abstract class LivingEntityRendererMixin {
         Minecraft mc = Minecraft.getInstance();
         NameStyleConfig cfg = NameStyleConfig.get();
         if (mc != null && entity == mc.player && cfg.enabled && cfg.showOwnNametag
-                && !mc.options.getCameraType().isFirstPerson() && Minecraft.renderNames()) {
+                && !mc.options.getCameraType().isFirstPerson() && !mc.gui.hud.isHidden()) {
             cir.setReturnValue(true);
         }
     }
