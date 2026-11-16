@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "namestyle",
+  "version": "${version}",
+  "name": "NameStyle",
+  "description": "Eigener Name mit Farbe, Schriftart und Stil - ueber dem Kopf, in der Tab-Liste und im Chat (nur clientseitig).",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.namestyle.NameStyleClient"] },
+  "mixins": [{ "config": "namestyle.mixins.json", "environment": "client" }],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

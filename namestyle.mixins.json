@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "dev.namestyle.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EntityMixin",
+    "PlayerMixin",
+    "LivingEntityRendererMixin",
+    "PlayerTabOverlayMixin",
+    "ChatComponentMixin"
+  ],
+  "injectors": { "defaultRequire": 0 }
+}
